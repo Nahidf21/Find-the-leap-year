@@ -15,6 +15,8 @@ def is_leap(year):
 #find the leap year with the selected month 
 def days_in_month(year, month):
    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+   if month>12 or month <0:
+     return "Invalid statement"
    if is_leap(year)==1:
      month_days[month-1]=29
      print(f"{year} , this year is a leap year.")
